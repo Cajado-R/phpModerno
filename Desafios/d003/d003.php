@@ -11,8 +11,9 @@
     <?php 
     
     $valorEmReais = $_GET["numero"];
-    echo $valorEmReais;
+    echo "$valorEmReais";
 
     ?>
+    <a href="index.html">Voltar</a>
 </body>
 </html>
