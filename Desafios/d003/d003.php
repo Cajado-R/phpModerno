@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php 
-    
-    $valorEmReais = $_GET["numero"];
-    echo "$valorEmReais";
-
-    ?>
-    <a href="index.html">Voltar</a>
+    <main>
+        <?php
+        
+        $valorEmReais = $_GET["numero"];
+        $formatarValorEmReais = number_format($valorEmReais, 2, '.', '');
+        echo "Com R$$formatarValorEmReais";
+        $calculo = $valorEmReais / 4.94;
+        $formatanrCalculo = number_format($calculo, 2, '.', '');
+        echo "<p>Você irá receber: US$ $formatanrCalculo</p>"
+        ?>
+        <a href="index.html">Voltar</a>
+    </main>
 </body>
 </html>
