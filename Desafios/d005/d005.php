@@ -16,6 +16,17 @@
     <main>
         <section>
             <?php
+            /* UMA FORMA DE FAZER O REPLACE COMO VISTO EM AULA: 
+            CRIAR UMA VARIAVEL PADRÃO: $padrão = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+            numfmt é para criar um padrão de formatação, neste caso estamos formatando em português do Brasil, logo em seguida utilizariamos dentro do echo essa formatação 
+
+            echo "... " . numfmt_format_currency($padrão, $numero, "BRL"). " você consegue comprar um total de " . numfmt_format_currency($padrão, $numeroDolar, "USD"). "
+
+            Onde o USD e o BRL são os tipos de moedas que seriam formatadas caso eu escolhesse utilziar este método. 
+            
+            
+            */
+            
             // str_replace(',', '.', $_GET['numero'] serve para adicionar as virgulas e pontos no "Local correto" )
                 $numero = str_replace(',', '.', $_GET['numero']);
             //Aqui é feita a substituição para pegar apenas a parte fracionada
